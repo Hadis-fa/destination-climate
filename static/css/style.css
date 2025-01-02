@@ -1,0 +1,63 @@
+/* Body styles */
+body {
+    background-image: url('/pictures/travel.jpg'); /* Background image for the entire page */
+    background-size: cover; /* Ensures the image covers the entire body area */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    min-height: 100vh; /* Minimum height to cover the full viewport */
+    height: 100%; /* Sets body height to 100% of the viewport */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    font-family: Arial, sans-serif; /* Sets the font for the page */
+}
+
+/* Styling for content container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a shadow for depth */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+/* Styling for input elements and buttons */
+input[type="number"], button {
+    width: 100%; /* Ensures these elements fill their container */
+    padding: 10px; /* Adds padding for better interaction */
+    margin-top: 10px; /* Spacing between elements */
+}
+
+/* Styling for results display */
+#destinationResult {
+    color: red; /* Text color */
+    font-weight: bold; /* Bold text for emphasis */
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid red; /* Adds a border for visibility */
+    background-color: rgba(255, 255, 255, 0.5); /* Lightly transparent background */
+    width: 100%;
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+/* Button styling */
+button {
+    background-color: #007BFF; /* Primary blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor indicates clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
