@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> <!-- Linking CSS for styling -->
+    <title>Weather Destination Finder</title> <!-- Title displayed in the browser tab -->
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Desired Temperature (°F)</h1> <!-- Heading prompting user input -->
+        <input type="number" id="tempInput" placeholder="Temperature in Fahrenheit"> <!-- Input field for temperature -->
+        <button onclick="findDestination()">Find Destination</button> <!-- Button to trigger destination search -->
+        <div id="destinationResult"></div> <!-- Container where the result will be displayed -->
+        <button id="moreDetailsButton" style="display:none;" onclick="getMoreDetails()">More Details</button> <!-- Button for more details, hidden initially -->
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
