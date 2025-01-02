@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/details.css') }}"> <!-- Link to external CSS file -->
+    <title>Weather Details</title> <!-- Title of the page shown in the browser tab -->
+</head>
+<body>
+    <div class="weather-details">
+        <h1 id="cityName">City Name</h1> <!-- Placeholder for city name that will be dynamically updated -->
+        <div class="weather-info">
+            <p id="temperature">Temperature: --°C</p> <!-- Placeholder for temperature, updated dynamically -->
+            <p id="weather">Weather: --</p> <!-- Placeholder for weather condition, updated dynamically -->
+            <p id="humidity">Humidity: --%</p> <!-- Placeholder for humidity, updated dynamically -->
+            <p id="wind">Wind: -- km/h</p> <!-- Placeholder for wind speed, updated dynamically -->
+            <p id="more-info">Additional Information Here</p> <!-- Placeholder for additional weather information -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/details.js') }}"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
