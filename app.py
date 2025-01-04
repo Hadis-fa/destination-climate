@@ -5,6 +5,24 @@ app = Flask(__name__, static_url_path='', static_folder='static', template_folde
 
 API_KEY = 'cf02a83079bd232e840bc5b623171abe'  # API key for weather data
 
+# Expanded list of cities from around the world
+CITIES = [
+    'Toronto', 'Montreal', 'Vancouver', 'Calgary', 'Edmonton',
+    'New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix',
+    'Mexico City', 'Buenos Aires', 'Santiago', 'Rio de Janeiro', 'Lima',
+    'London', 'Paris', 'Berlin', 'Rome', 'Madrid', 'Lisbon', 'Athens',
+    'Tehran', 'Beijing', 'Tokyo', 'Seoul', 'Dubai', 'Istanbul', 'Mumbai',
+    'Sydney', 'Melbourne', 'Auckland', 'Cape Town', 'Nairobi', 'Cairo',
+    'Moscow', 'Warsaw', 'Prague', 'Vienna', 'Amsterdam', 'Brussels',
+    'Singapore', 'Bangkok', 'Jakarta', 'Hanoi', 'Kuala Lumpur', 'Manila',
+    'Riyadh', 'Doha', 'Abu Dhabi', 'Casablanca', 'Johannesburg',
+    'Lagos', 'Accra', 'Algiers', 'Kinshasa', 'Dar es Salaam',
+    'Ottawa', 'Quebec City', 'Halifax', 'Victoria', 'Edinburgh', 'Dublin',
+    'Brisbane', 'Perth', 'Adelaide', 'Wellington', 'Christchurch',
+    'Oslo', 'Stockholm', 'Copenhagen', 'Helsinki', 'Reykjavik',
+    'Buenos Aires', 'Bogota', 'Quito', 'Caracas', 'Havana', 'Port-au-Prince'
+]
+
 @app.route('/')
 def index():
     # Serve the main page
@@ -19,8 +37,8 @@ def get_closest_weather():
     closest_temp = None
     smallest_diff = float('inf')  # Initialize smallest difference to infinity
 
-    for city in ['Toronto', 'Montreal']:
-        # Call the weather API for each city
+    # Iterate through the list of cities and get weather data
+    for city in CITIES:
         response = requests.get(f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=imperial")
         if response.status_code == 200:
             city_temp = response.json().get('main', {}).get('temp')  # Extract temperature from response
@@ -75,3 +93,4 @@ def details():
 
 if __name__ == '__main__':
     app.run(debug=True)  # Start the application with debugging enabled
+
