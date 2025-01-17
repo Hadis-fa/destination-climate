@@ -22,4 +22,4 @@ OpenWeatherMap API: To fetch live weather data for cities.
 
 👤 Author
 Hadis Farrokhi
-Undergraduate Math Student at University of Waterloo
+Undergraduate Software Eng Student at University of Waterloo
